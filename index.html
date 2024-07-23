@@ -23,7 +23,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous">
   </head>
-  <body>
+  <body onload="loadInitialData()">
 
     <div class="add__new__btn__mobile__only d-sm-block d-md-block d-lg-none">
       <button
@@ -103,7 +103,7 @@
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary"
               data-bs-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary">
+            <button type="submit" class="btn btn-primary" onclick="handleSubmit()">
               Save changes
             </button>
           </div>
@@ -140,19 +140,23 @@
         <button class="navbar-toggler" type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-controls="navbarSupportedContent" 
+          aria-expanded="false"
           aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" 
+        id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" 
+              href="#">Home</a>
             </li>
           </ul>
           <button
             class="btn btn-outline-primary d-flex align-items-center gap-3"
-            type="submit" data-bs-toggle="modal" data-bs-target="#addNewModal">
+            type="submit" data-bs-toggle="modal" 
+            data-bs-target="#addNewModal">
             <i class="fa-solid fa-plus"></i> Add New Item
           </button>
         </div>
@@ -165,7 +169,8 @@
           <div class="col-md-6">
             <div class="input-group flex-nowrap shadow-lg rounded">
               <input type="search" class="form-control"
-                placeholder="Search Your Task Here..." aria-label="Search Task"
+                placeholder="Search Your Task Here..." 
+                aria-label="Search Task"
                 aria-describedby="addon-wrapping" />
               <span class="input-group-text" id="addon-wrapping">
                 <i class="fa-solid fa-magnifying-glass"></i>
