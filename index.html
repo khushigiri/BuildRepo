@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <!-- Font awesome icons -->
@@ -31,10 +32,11 @@
         type="submit"
         data-bs-toggle="modal"
         data-bs-target="#addNewModal">
-        <i class="fa-solid fa-plus"></i> Add New Item
+        <i class="fa-solid fa-plus mr-4"></i> Add New Item
       </button>
     </div>
-
+    
+    <!--Add New Item-->
     <div class="modal fade"
       id="addNewModal"
       tabindex="-1"
@@ -52,7 +54,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <form>
+            <form onsubmit="return false">
               <div class="mb-3">
                 <label for="ImageURL"
                   class="form-label">Image URL</label>
@@ -103,7 +105,8 @@
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary"
               data-bs-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary" onclick="handleSubmit()">
+            <button type="submit" class="btn btn-primary"
+              onclick="handleSubmit(event)">
               Save changes
             </button>
           </div>
@@ -140,22 +143,22 @@
         <button class="navbar-toggler" type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" 
+          aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" 
-        id="navbarSupportedContent">
+        <div class="collapse navbar-collapse"
+          id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" 
-              href="#">Home</a>
+              <a class="nav-link active" aria-current="page"
+                href="#">Home</a>
             </li>
           </ul>
           <button
             class="btn btn-outline-primary d-flex align-items-center gap-3"
-            type="submit" data-bs-toggle="modal" 
+            type="submit" data-bs-toggle="modal"
             data-bs-target="#addNewModal">
             <i class="fa-solid fa-plus"></i> Add New Item
           </button>
@@ -169,7 +172,7 @@
           <div class="col-md-6">
             <div class="input-group flex-nowrap shadow-lg rounded">
               <input type="search" class="form-control"
-                placeholder="Search Your Task Here..." 
+                placeholder="Search Your Task Here..."
                 aria-label="Search Task"
                 aria-describedby="addon-wrapping" />
               <span class="input-group-text" id="addon-wrapping">
